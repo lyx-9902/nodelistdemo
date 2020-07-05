@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="/public/css/bootstrap.css" />
+	</head>
+	<body>
+<!--  http://127.0.0.1:3000/node/feedback/node_modules/bootstrap/dist/css/bootstrap.css -->
+		<div class="page-header">
+			<h1>请输入留言</h1>
+			<a href="/post">发表留言</a>
+		</div>
+		<div class="comments container">
+			<ul class="list-group">
+				{{each comments}}
+				<li class="list-group-item">{{$value.name}}说：{{$value.message}}
+				<span class="pull-right">{{$value.dataTime}}</span>
+				</li>
+				
+				{{/each}}
+			</ul>
+
+		</div>
+
+
+	</body>
+
+	
+</html>
